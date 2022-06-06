@@ -54,6 +54,7 @@ public class TinyDB {
      * Context is required to get the instance of Shared Preferences class
      *
      * @param context SharedPreferences key
+     * @return Returns instance of TinyDB class
      */
 
     public static TinyDB getInstance(Context context) {
@@ -68,6 +69,7 @@ public class TinyDB {
      *
      * @param key   SharedPreferences key
      * @param value String value to be added
+     * @return Returns singletone instance of TinyDB class
      */
 
     public TinyDB putString(String key, String value) {
@@ -92,6 +94,7 @@ public class TinyDB {
      *
      * @param key   SharedPreferences key
      * @param value Integer value to be added
+     * @return Returns singletone instance of TinyDB class
      */
 
     public TinyDB putInt(String key, int value) {
@@ -116,6 +119,7 @@ public class TinyDB {
      *
      * @param key   SharedPreferences key
      * @param value Long value to be added
+     * @return Returns singletone instance of TinyDB class
      */
 
     public TinyDB putLong(String key, long value) {
@@ -140,6 +144,7 @@ public class TinyDB {
      *
      * @param key   SharedPreferences key
      * @param value Float value to be added
+     * @return Returns singletone instance of TinyDB class
      */
 
     public TinyDB putFloat(String key, float value) {
@@ -164,6 +169,7 @@ public class TinyDB {
      *
      * @param key   SharedPreferences key
      * @param value Boolean value to be added
+     * @return Returns singletone instance of TinyDB class
      */
 
     public TinyDB putBoolean(String key, boolean value) {
@@ -188,6 +194,7 @@ public class TinyDB {
      *
      * @param key   SharedPreferences key
      * @param value String Set value to be added
+     * @return Returns singletone instance of TinyDB class
      */
 
     public TinyDB putStringSet(String key, Set<String> value) {
@@ -212,6 +219,7 @@ public class TinyDB {
      *
      * @param key    SharedPreferences key
      * @param object Object value to be added
+     * @return Returns singletone instance of TinyDB class
      */
 
     public TinyDB putObject(String key, Object object) {
@@ -224,6 +232,8 @@ public class TinyDB {
      * Get Object from SharedPreferences at 'key'. If key not found, return 'blank'
      *
      * @param key SharedPreferences key
+     * @param objectType Object of a class
+     * @param <T> Object Class name
      * @return Object value at 'key' or 'blank' if key not found
      */
 
@@ -238,6 +248,7 @@ public class TinyDB {
      *
      * @param key SharedPreferences key
      * @param uri Uri value to be added
+     * @return Returns singletone instance of TinyDB class
      */
 
     public TinyDB putImageUri(String key, Uri uri) {
@@ -261,6 +272,7 @@ public class TinyDB {
      *
      * @param key    SharedPreferences key
      * @param bitmap Bitmap value to be added
+     * @return Returns singletone instance of TinyDB class
      */
 
     public TinyDB putImageBitmap(String key, Bitmap bitmap) {
@@ -284,6 +296,7 @@ public class TinyDB {
      *
      * @param key  SharedPreferences key
      * @param list ArrayList value to be added
+     * @return Returns singletone instance of TinyDB class
      */
 
     public TinyDB putArrayList(String key, ArrayList<?> list) {
