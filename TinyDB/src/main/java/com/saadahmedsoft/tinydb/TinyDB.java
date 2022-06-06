@@ -34,7 +34,7 @@ import java.util.Set;
  * Custom Shared Preferences class.
  * Made by Saad Ahmed on 16-May-2022.
  * This class has been made to simplify the built-in Shared Preferences class.
- * Get extra features like putting and getting Object, ArrayList, Uri and Bitmap.
+ * Get extra features like putting and getting Object, Uri and Bitmap.
  */
 
 public class TinyDB {
@@ -289,33 +289,6 @@ public class TinyDB {
 
     public Bitmap getImageBitmap(String key) {
         return stringToBitmap(preferences.getString(key, ""));
-    }
-
-    /**
-     * Put ArrayList value into SharedPreferences with 'key' and apply()
-     *
-     * @param key  SharedPreferences key
-     * @param list ArrayList value to be added
-     * @return Returns singletone instance of TinyDB class
-     */
-
-    public TinyDB putArrayList(String key, ArrayList<?> list) {
-        Gson gson = new Gson();
-        editor.putString(key, gson.toJson(list));
-        return instance;
-    }
-
-    /**
-     * Get ArrayList value from SharedPreferences at 'key'. If key not found, return 'blank'
-     *
-     * @param key        SharedPreferences key
-     * @param objectType Object type "e.g: Class object"
-     * @return ArrayList value at 'key' or 'blank' if key not found
-     */
-
-    public ArrayList<?> getArrayList(String key, Class<?> objectType) {
-        Gson gson = new Gson();
-        return gson.fromJson(preferences.getString(key, ""), ArrayList.class);
     }
 
     /**
